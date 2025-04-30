@@ -1,0 +1,11 @@
+# Solana Coin Flip Game Project Rules
+
+## Project Intelligence
+
+### Directory Structure
+- `/memory-bank`: Contains all project documentation and context
+- `/programs`: Will contain Solana smart contracts
+- `/app`: Will contain Next.js frontend application
+- `/tests`: Will contain program and integration tests
+
+[Rest of .clinerules content...]
