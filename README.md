@@ -14,20 +14,51 @@ A decentralized coin flip gambling game built on Solana blockchain with Next.js 
 
 Play now at [demo-url] (development version)
 
-### Test Mode
-1. Connect your wallet
-2. Get test SOL through airdrop
-3. Choose your bet amount (1-3 SOL)
-4. Select heads or tails
-5. Place your bet and watch the coin flip!
+## Deployment 🌐
 
-## Technology Stack 🛠
+### Quick Deploy
+The fastest way to deploy your own instance:
 
-- **Frontend**: Next.js 15.3.1, React 18, TypeScript
-- **Styling**: Tailwind CSS, CSS Modules
-- **Blockchain**: Solana Web3.js
-- **Animation**: CSS 3D Transforms
-- **State Management**: React Hooks
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fsolana-coin-flip)
+
+### Manual Deployment Steps
+
+1. **Fork & Clone**
+   ```bash
+   git clone https://github.com/yourusername/solana-coin-flip.git
+   cd solana-coin-flip
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   cd app
+   npm install
+   ```
+
+3. **Environment Setup**
+   Create a `.env.local` file in the `app` directory:
+   ```env
+   NEXT_PUBLIC_RPC_URL=https://api.devnet.solana.com
+   NEXT_PUBLIC_NETWORK=devnet
+   ```
+
+4. **Deploy to Vercel**
+   ```bash
+   vercel
+   ```
+   Or connect your GitHub repository to Vercel for automatic deployments.
+
+### Environment Variables
+
+Required variables for deployment:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NEXT_PUBLIC_RPC_URL` | Solana RPC URL | https://api.devnet.solana.com |
+| `NEXT_PUBLIC_NETWORK` | Solana network | devnet |
+| `NEXT_PUBLIC_MIN_BET` | Minimum bet amount | 1 |
+| `NEXT_PUBLIC_MAX_BET` | Maximum bet amount | 3 |
+| `NEXT_PUBLIC_WIN_RATE` | Win probability | 35 |
 
 ## Development 💻
 
@@ -37,23 +68,23 @@ Play now at [demo-url] (development version)
 - Solana CLI tools
 - Phantom Wallet or similar Solana wallet
 
-### Setup
+### Local Setup
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/solana-coin-flip.git
-
 # Install dependencies
-cd solana-coin-flip
+cd app
 npm install
 
 # Start development server
 npm run dev
 ```
 
-### Environment Variables
-Create a `.env.local` file:
-```
-NEXT_PUBLIC_RPC_URL=your-solana-rpc-url
+### Build
+```bash
+# Production build
+npm run build
+
+# Start production server
+npm start
 ```
 
 ## Game Economics 💰
@@ -64,39 +95,12 @@ NEXT_PUBLIC_RPC_URL=your-solana-rpc-url
 - **Payout**: 2x bet amount on win
 - **House Edge**: 65%
 
-## Visual Effects 🎮
-
-### Coin Design
-- Realistic golden gradients
-- 3D perspective rendering
-- Smooth flip animation
-- Dynamic lighting effects
-
-### UI Features
-- Glassmorphism panels
-- Responsive layout
-- Interactive hover effects
-- Toast notifications
-- Loading states
-
-## Contributing 🤝
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## Security 🔒
 
 - Client-side wallet integration
 - Server-side transaction verification
 - Rate limiting implementation
 - Error handling and validation
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Recent Updates 🆕
 
@@ -113,6 +117,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Wallet integration
 - Test SOL support
 
+## Contributing 🤝
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## Roadmap 🗺️
 
 - [ ] User statistics tracking
@@ -121,14 +133,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Social sharing features
 - [ ] Mobile app version
 
-## Contact 📬
+## License 📄
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Twitter: [@yourusername](https://twitter.com/yourusername)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support 🤝
+
+For support, join our [Discord community](your-discord-link) or open an issue.
 
 ## Acknowledgments 🙏
 
 - Solana Foundation
 - Next.js team
 - React community
-- Our contributors
+- Contributors
