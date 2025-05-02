@@ -8,4 +8,147 @@
 - `/app`: Will contain Next.js frontend application
 - `/tests`: Will contain program and integration tests
 
-[Rest of .clinerules content...]
+### Key Files
+- `Anchor.toml`: Anchor framework configuration
+- `Cargo.toml`: Rust dependencies for smart contracts
+- `package.json`: Node.js dependencies for frontend
+- `tsconfig.json`: TypeScript configuration
+
+### Naming Conventions
+1. **Smart Contract**
+   - Use snake_case for Rust functions and variables
+   - Use PascalCase for structs and enums
+   - Use SCREAMING_SNAKE_CASE for constants
+
+2. **Frontend**
+   - Use PascalCase for React components
+   - Use camelCase for variables and functions
+   - Use kebab-case for file names
+
+### Code Patterns
+1. **Smart Contract Patterns**
+   - Always use PDAs for game state accounts
+   - Implement proper error handling for all instructions
+   - Validate all inputs at instruction start
+   - Check account constraints before processing
+
+2. **Frontend Patterns**
+   - Use React hooks for wallet connection
+   - Implement error boundaries for components
+   - Handle all transaction states (pending, success, error)
+   - Use TypeScript for all new files
+
+### Testing Patterns
+1. **Smart Contract Tests**
+   - Test all instruction paths
+   - Include error case tests
+   - Mock oracle responses
+   - Test fund handling thoroughly
+
+2. **Frontend Tests**
+   - Test wallet connection flows
+   - Mock blockchain interactions
+   - Test error handling
+   - Verify transaction flows
+
+## Project Workflow
+
+### Development Process
+1. Write/update documentation first
+2. Implement smart contract changes
+3. Add comprehensive tests
+4. Create frontend components
+5. Test integration points
+6. Update progress tracking
+
+### Git Workflow
+1. Use feature branches for development
+2. Include tests with all changes
+3. Update docs with code changes
+4. Require review before merging
+
+### Documentation Updates
+1. Keep Memory Bank files updated
+2. Document all instruction changes
+3. Update API documentation
+4. Maintain test documentation
+
+## Common Operations
+
+### Smart Contract Development
+```bash
+# Build program
+anchor build
+
+# Test program
+anchor test
+
+# Deploy program
+anchor deploy
+
+# Verify program
+solana program show <PROGRAM_ID>
+```
+
+### Frontend Development
+```bash
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build production
+npm run build
+
+# Type check
+npm run typecheck
+```
+
+## Error Handling
+
+### Smart Contract Errors
+1. Always use custom error types
+2. Include descriptive error messages
+3. Handle all error cases
+4. Return specific error codes
+
+### Frontend Errors
+1. Use error boundaries
+2. Show user-friendly messages
+3. Log technical details
+4. Implement recovery flows
+
+## Security Rules
+
+### Smart Contract Security
+1. Validate all inputs
+2. Check account ownership
+3. Verify signatures
+4. Handle funds atomically
+
+### Frontend Security
+1. Validate user inputs
+2. Secure wallet connections
+3. Handle transaction errors
+4. Protect user data
+
+## Performance Guidelines
+
+### Smart Contract Performance
+1. Minimize state updates
+2. Optimize instruction layout
+3. Reduce computation costs
+4. Batch operations when possible
+
+### Frontend Performance
+1. Implement proper loading states
+2. Optimize component renders
+3. Cache transaction results
+4. Minimize network requests
+
+## Regular Updates
+- Update Memory Bank files
+- Review security measures
+- Check performance metrics
+- Update documentation
