@@ -20,5 +20,14 @@
   "github": {
     "silent": true,
     "autoAlias": true
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/app/$1" }
+  ],
+  "builds": [
+    {
+      "src": "app/package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }
