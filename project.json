@@ -1,0 +1,24 @@
+{
+  "name": "solana-coin-flip",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Salilgbc/coin-flip-solana.git"
+  },
+  "projectSettings": {
+    "framework": "nextjs",
+    "root": "app",
+    "buildCommand": "npm run build",
+    "outputDirectory": ".next",
+    "devCommand": "npm run dev",
+    "installCommand": "npm install"
+  },
+  "env": {
+    "NEXT_PUBLIC_RPC_URL": "https://api.devnet.solana.com",
+    "NEXT_PUBLIC_NETWORK": "devnet",
+    "NODE_ENV": "production",
+    "NEXT_PUBLIC_MIN_BET": "1",
+    "NEXT_PUBLIC_MAX_BET": "3",
+    "NEXT_PUBLIC_WIN_RATE": "35"
+  }
+}
