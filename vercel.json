@@ -1,33 +1,13 @@
 {
+  "version": 2,
+  "outputDirectory": ".next",
   "framework": "nextjs",
-  "buildCommand": "cd app && npm install && npm run build",
-  "devCommand": "cd app && npm run dev",
-  "installCommand": "cd app && npm install",
-  "outputDirectory": "app/.next",
-  "regions": ["iad1"],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "rootDirectory": "app",
   "env": {
     "NEXT_PUBLIC_RPC_URL": "https://api.devnet.solana.com",
     "NEXT_PUBLIC_NETWORK": "devnet",
     "NODE_ENV": "production"
-  },
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_RPC_URL": "https://api.devnet.solana.com",
-      "NEXT_PUBLIC_NETWORK": "devnet",
-      "NODE_ENV": "production"
-    }
-  },
-  "github": {
-    "silent": true,
-    "autoAlias": true
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/app/$1" }
-  ],
-  "builds": [
-    {
-      "src": "app/package.json",
-      "use": "@vercel/next"
-    }
-  ]
+  }
 }
