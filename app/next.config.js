@@ -6,9 +6,6 @@ const nextConfig = {
   images: {
     domains: ['raw.githubusercontent.com'],
   },
-  experimental: {
-    serverActions: true,
-  },
   // Environment Variables available at build time
   env: {
     NEXT_PUBLIC_RPC_URL: process.env.NEXT_PUBLIC_RPC_URL,
@@ -31,18 +28,28 @@ const nextConfig = {
     ];
   },
   // Webpack configuration for Solana web3
-  webpack(config, { isServer }) {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        os: false,
-        path: false,
-        crypto: false,
-      };
+  webpack: (config) => {
+    if (!config.resolve) {
+      config.resolve = {};
     }
+    if (!config.resolve.fallback) {
+      config.resolve.fallback = {};
+    }
+
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      os: false,
+      path: false,
+      crypto: false,
+    };
+
     return config;
   },
-};
+  // Disable x-powered-by header
+  poweredByHeader: false,
+  // Generate static HTML files
+  output: 'standalone',
+}
 
 module.exports = nextConfig;
