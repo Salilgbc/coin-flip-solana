@@ -1,12 +1,7 @@
 {
-  "version": 2,
-  "framework": "nextjs",
   "buildCommand": "cd app && npm install && npm run build",
+  "devCommand": "cd app && npm run dev",
   "installCommand": "cd app && npm install",
   "outputDirectory": "app/.next",
-  "env": {
-    "NEXT_PUBLIC_RPC_URL": "https://api.devnet.solana.com",
-    "NEXT_PUBLIC_NETWORK": "devnet",
-    "NODE_ENV": "production"
-  }
+  "framework": "nextjs"
 }
